@@ -1,0 +1,226 @@
+.body {
+  background: rgb(51,63,64);
+  background: linear-gradient(270deg, #627bce 0%, #20327b 100%);
+  margin: 0 auto;
+  font-family: "Assistant";
+  direction: rtl;
+  user-select: none;
+  color: #d1fbff;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.body-snake-game {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px 3px rgba(44, 41, 41, 0.979);
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(1.04);
+  -webkit-transform: scale(1.04);
+  color: #333F40;
+  background: rgb(123,173,177);
+  background: linear-gradient(0deg, #7792ec 0%, rgba(166, 155, 255, 0.4) 100%);
+  transition: all 0.5s ease 0s;
+}
+
+.exercises-title {
+  text-align: center;
+  margin-top: 5%;
+  font-size: 9vh;
+}
+
+.check-button {
+  position: relative;
+  margin-top: 2%;
+  right: 42.5%;
+  width: 15%;
+  height: 90%;
+  font-size: 4vh;
+}
+
+  
+.snake-explanation {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 70px;
+  padding: 2%;
+  width: 70vw;
+}
+  
+.instructions-design {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3%;
+  font-size: 2.35vh;
+  height: 56vh;
+}
+
+.next-button {
+  position: relative;
+  margin-top: 2%;
+  right: 39.5%;
+  width: 21%;
+  height: 8%;
+  font-size: 4vh;
+}
+  
+.game-stage {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  background-color: rgb(59, 149, 112);
+  box-shadow: 6px 6px 40px #33333391;
+  height: 81%;
+  width: 50%;
+  top: 16vh;
+  left: 26vw;
+}
+  
+.bar-game {
+  font-weight: 1000;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  height: 8vh;
+  top: 8vh;
+  left: 26vw;
+}
+
+.score,
+.points {
+  font-size: 3vh;
+  position: relative;
+  top: 10%;
+}
+  
+.hearts-container {
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  margin: 0.5%;
+  left: 1%;
+  width: 18%;
+}
+
+.heart {
+  position: relative;
+  width: 3vw;
+  height: 6vh;
+  margin: 1.5%;
+  top: 10%;
+}
+
+.level {
+  font-size: 4vh;
+  position: relative;
+  bottom: 15%;
+  left: 6%;
+}
+  
+.points {
+  left: 18%;
+  top: 48%;
+}
+
+.snake {
+  width: 10%;
+  height: 38%;
+}
+  
+.button-try-again {
+  margin-top: 2%;
+  height: 20%;
+  width: 30%;
+  background-color: rgb(127, 194, 136);
+}
+
+.button-try-again:hover {
+  background-color: rgb(199, 238, 204);
+}
+.lose-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 5vh;
+  background-color: rgb(158, 156, 156);
+  height: 81%;
+  width: 50%;
+  top: 16vh;
+  left: 26vw;
+}
+
+.square {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.win-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Assistant";
+  text-align: center;
+  font-size: 6vh;
+  background-color:#33c190;
+  height: 81%;
+  width: 50%;
+  top: 16vh;
+  left: 26vw;
+}
+
+.button-next-level {
+  font-size: 4vh;
+  height: 20%;
+  width: 30%;
+  background-color:rgb(100, 94, 235);
+}
+
+.button-next-level:hover {
+  background-color: #bbd4f1;
+}
+
+.text-win {
+  margin: 1%;
+}
+
+.home-page-button-design {
+  position: relative;
+  height: 15vh;
+  width: 30vw;
+  background-color: rgb(153, 177, 255);
+  font-size: 5.5vh;
+  bottom: 10vh;
+}
+
+.end-complete-sentences {
+  position: relative;
+  bottom: 10vh;
+  font-size: 12vh;
+}

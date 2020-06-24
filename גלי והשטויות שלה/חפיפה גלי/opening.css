@@ -1,0 +1,101 @@
+* {
+    font-family: segoe ui, Geneva, Verdana, sans-serif;
+    direction: rtl;
+    user-select: none;
+}
+
+button {
+    color: white;
+    background: rgb(88, 147, 250);
+    background: linear-gradient(90deg, rgba(88, 147, 250, 0.7) 0%, rgba(80, 112, 231, 0.7) 100%);
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+    margin: 2vh 2vw;
+    box-shadow: 5px 10px 20px black;
+
+    transition: all 0.4s ease 0s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(196, 241, 255);
+    background-image: url("bg.jpg");
+    background-size: 100vw 100vh;
+}
+
+.div-title {
+    position: absolute;
+    width: 100vw;
+    z-index: 1;
+    text-align: center;
+    top: 10vh;
+}
+
+.title {
+    font-size: 8vh;
+    text-align: center;
+    font-weight: bold;
+
+    margin: 0px auto;
+    color: black;
+    letter-spacing: 5px;
+    top: 50%;
+    text-shadow: -1px -1px 0px rgb(88, 147, 250, 0.7),
+        6px 6px 0px rgb(88, 147, 250, 0.7);
+
+    transition: all 0.4s ease 0s;
+}
+
+.title:hover {
+    text-shadow: -1px -1px 0px rgb(88, 147, 250, 0.1),
+        6px 6px 0px rgb(88, 147, 250, 0.1);
+    transition: all 0.4s ease 0s;
+}
+
+.div-btns {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 55vh;
+    right: 5vw;
+    width: 50vw;
+}
+
+.btn {
+    min-width: 18vw;
+    height: 20vh;
+    font-size: 5vh;
+}
+
+.btn:hover {
+    width: 12vw;
+    min-width: 20vw;
+    height: 22vh;
+    font-size: 6vh;
+}
+
+.btn-about {
+    width: 7vw;
+    min-width: fit-content;
+    height: 10vh;
+    font-size: 5vh;
+}
+
+.btn-about:hover {
+    width: 7vw;
+    min-width: fit-content + 1vw;
+    height: 11vh;
+    font-size: 6vh;
+}

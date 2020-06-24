@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset = "UTF-8"/>
+
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="snake.css">
+        <link rel="stylesheet" href="../font-master.css" />   
+
+        <!-- javascript -->
+        <script type="text/javascript" src="../assets/jQuery/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="snake.js"></script>
+    </head>
+    <body class="body body-snake-game">
+        <div class="black"></div>
+        <div class="darked"></div>
+
+       <!-- הוספת כפתור עזרה -->
+       <img src="../assets/images/i.svg" class="help" />
+       <div class="snake-explanation">
+           <img src="../assets/images/x.svg" class="exit"/>
+           <p class="help-explanation-text">
+                אוי לא! הורידו לאוטובוסים את המספרים!
+                <br>
+                 כיצד נדע באיזה אוטובוס נבחר כדי להגיע בשלום לבסיס?
+                <br>
+                <p class="help-inside-text">
+                    תצטרכו לתפוס את האוטובוס עם צירוף המילים הנכונות!
+                    <br>
+                    במידה ותבחרו אוטובוס לא נכון, החיים שלכם ירדו וכך גם הניקוד.
+                    <br>
+                    אין לעבור את גבולות המסך. במידה ועברתם זה ייחשב כפסילה.
+                    <br>
+                    שימו לב שהתזוזה היא באמצעות מקשי החיצים.
+                </p>
+           </p>
+       </div>   
+
+       <div class="game-stage"></div>
+       <div class="bar-game">
+            <div class="score-container">
+                <p class='score'>ניקוד:</p>
+                <p class='points'>0</p>
+            </div>
+            <p class="level"></p>
+            <div class="hearts-container"></div>
+       </div>
+    </body>
+</html>
+

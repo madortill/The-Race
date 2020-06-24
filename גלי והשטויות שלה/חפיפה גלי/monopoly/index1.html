@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <title></title>
+    <meta charset="UTF-8" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style/index1.css">
+
+    <!-- javascript -->
+    <script type="text/javascript" src="JQuery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="scripts/index1.js"></script>
+</head>
+</head>
+
+<body>
+    <div class="div-board" id="divBoard"></div>
+    <img src="media/player.png" class="img-player" id="imgPlayer" />
+
+
+
+    <div class="div-buttons">
+        <button id="btnRoll" class="btn-roll">הגרל מספר</button>
+        <div id="btnHelp" class="div-help">?</div>
+    </div>
+
+    <img src="media/dice.gif" class="img-dice" id="imgDice" />
+    <div id="numSteps" class="div-num-steps"></div>
+
+    <div class="div-inner">
+        <p class="p-steps-left" id="pStepsLeft"></p>
+        <p class="p-items-left" id="pItemsLeft"></p>
+        <div class="div-score" id="divScore">
+            <img src="media/hand-sanitizer.svg" id="imgHandSanitizer" class="img-hand-sanitizer" />
+            <p class="p-sanitizer" id="sanitizerScore"></p>
+            <img src="media/coin.svg" id="imgCoins" class="img-coins" />
+            <p class="p-coins" id="coinsScore"></p>
+        </div>
+    </div>
+
+    <div class="div-contain" id="divConatinQuestion">
+        <div class="div-question" id="divQuestion">
+            <p class="p-question" id="pQuestion">שאלה כלשהי</p>
+            <div class="div-answers" id="divAnswers">
+                <div id="ans1" class="div-answer">1</div>
+                <div id="ans2" class="div-answer">2</div>
+                <div id="ans3" class="div-answer">3</div>
+                <div id="ans4" class="div-answer">4</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="div-contain" id="divConatinShop">
+        <div class="div-question" id="divShop">
+            <p class="p-question" id="pShop">תרצו לקנות בקבוק אלכוג'ל תמורת 70 שקלים?</p>
+            <div class="div-answers" id="divBuyAnswers">
+                <div id="btnYes" class="div-answer">ברור שכן</div>
+                <div id="btnNo" class="div-answer">אולי אחר כך</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="div-contain" id="divConatinFact">
+        <div class="div-fact" id="divFact"></div>
+    </div>
+
+    <div id="div-rules" class="div-rules">
+        <p id="p-help" class="p-help">מה צריך לעשות</p>
+        <div id="div-rules-inner" class="div-rules-inner">
+            לקראת מגפת הקורונה, נדרשתם כחיילים להצטייד בג'ל לחיטוי ידיים לכל המחלקה! איך תשיגו אותו אתם שואלים? זה
+            פשוט. <br>
+            תזוזו על גבי הלוח בעזרת גלגול קובייה ומקשי החיצים ובדרך תענו על שאלות. <br> כל תשובה נכונה תזכה אתכם
+            במטבעות,
+            איתם תוכלו לקנות ג'ל בחנויות המפוזרות על הלוח. <br> <br> בהצלחה, כולם סומכים עליכם!
+        </div>
+        <button id="gotIt" class="btn-got-it">הבנתי!</button>
+    </div>
+
+    <img src="media/treasure.gif" class="gif-treasure" id="gifTreasure">
+
+    <p class="p-broke" id="pBroke">אין לכם מספיק כסף!</p>
+
+    <p class="p-got-money" id="pGotMoney">קיבלתם 50 מטבעות</p>
+
+
+</body>
+
+</html>

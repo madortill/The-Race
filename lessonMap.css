@@ -1,0 +1,95 @@
+.body {
+    background-image: url("assets/images/bgmap.svg");
+    background-size: 100vw 100vh;
+    font-family: "Rubik";
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    user-select: none;
+    direction: rtl;
+}
+
+.place-icon {
+    height: 16vh;
+    margin-bottom: 1%;
+}
+
+#home {
+    position: absolute;
+    width: 15vw;
+    height: 20vh;
+    top: 72vh;
+    right: 84vw;
+}
+
+#army {
+    position: absolute;
+    width: 15vw;
+    height: 19vh;
+    top: 72vh;
+    right: 1vw;
+}
+
+.exercises-container {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    height: 21%;
+    bottom: 0%;
+    /* padding-right: 18%; */
+    /* padding-left: 20%; */
+    /* transform: translate(-50%, -50%); */
+    justify-content: space-evenly;
+    margin: 0 15%;
+}
+
+/* התרגול הנוכחי שצריך לעשות */
+.current-exercise {
+    position: relative;
+    transform: scale(1.4);
+    bottom: 2.8vh;
+    cursor: pointer;
+}
+
+/* כל התרגולים שעברו והנוכחי */
+.enabled-exercise {
+    /* width: 9%; */
+    cursor: pointer;
+}
+
+/* השחקן */
+#player {
+    position: absolute;
+    height: 20vh;
+    top: 76vh;
+    left: 100vw;
+}
+
+.title-container {
+    position: relative;
+    display: none;
+    padding-top: 1.9%;
+    font-size: 10vh;
+    font-weight: 600;
+    text-align: center;
+    height: 17vh;
+    width: 100%;
+    color: #394374;
+    background-color: rgba(255, 255, 255, 0.521);
+    border-bottom-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    transition: height 1.5s ease;
+    transition: background-color 1.5s ease;
+    box-shadow: 0 24px 24px #cecece24;
+    z-index: 0;
+}
+
+/* מסך שחור של מעבר */
+.black {
+    position: absolute;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 3;
+  }

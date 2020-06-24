@@ -1,0 +1,123 @@
+* {
+    direction: rtl;
+}
+
+.div-explination {
+    top: 30vh;
+}
+
+.p-help-title {
+    font-size: 5vh;
+}
+
+.p-help-text {
+    font-size: 3vh;
+    padding: 3vh 3vw;
+}
+
+.p-num-pics {
+    position: absolute;
+    top: 1vh;
+    left: 65vw;
+    font-size: 4vh;
+}
+
+.p-life {
+    width: 21vw;
+    height: 10vh;
+    margin-right: 1vw;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+}
+
+.img-life {
+    width: 5vw;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+}
+
+.div-contain-ims {
+    background-color: rgb(115, 177, 219);
+    width: 94vw;
+    /* height: 70vh; */
+    margin-left: 3vw;
+    margin-right: 3vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3vh 1vw;
+    margin: 2vh 2vw;
+    border-radius: 10px;
+}
+
+.p-title {
+    font-size: 5vh;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    margin-right: 3vw;
+}
+
+.img-btn {
+    width: 20vw;
+    height: 25vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border-radius: 15px;
+}
+
+.divImage {
+    width: 20vw;
+    height: 25vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border: solid;
+    border-radius: 15px;
+    background-color: cadetblue;
+}
+
+.img-btn {
+    transition: all 0.4s ease 0s;
+}
+
+.img-btn:hover {
+    cursor: pointer;
+
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.4s ease 0s;
+}
+
+.div-all {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0vh;
+    left: 0vw;
+    visibility: hidden;
+}
+
+
+.div-feedback {
+    border-radius: 30px;
+    background-color: rgba(214, 235, 245, 0.9);
+    text-align: center;
+    z-index: 1;
+    visibility: hidden;
+}
+
+.div-finish {
+    position: absolute;
+    top: 0vh;
+    left: 0vw;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255, 0.00001);
+    z-index: 2;
+    visibility: hidden;
+}

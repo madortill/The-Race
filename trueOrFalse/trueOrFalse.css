@@ -1,0 +1,193 @@
+.body {
+    background-image: url("../assets/images/bgrightwrongfaded.svg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    margin: 0 auto;
+    font-family: "Rubik";
+    direction: rtl;
+    user-select: none;
+    color: #5289C7;
+    overflow: hidden;
+    height: 100vh;  
+    transition: background-image 2s ease; 
+}
+
+/* מסך שחור של מעבר */
+.black {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 3;
+}
+
+/* i כפתור עזרה */
+.help {
+    position: absolute;
+    width: 4vw;
+    height: 9vh;
+    top: 2.8%;
+    right: 0.95%;
+    z-index: 0;
+    cursor: pointer;
+}
+
+/* קונטיינר מסך העזרה */
+.help-explanation {
+    position: absolute;
+    font-size: 5vh;
+    padding: 3%;
+    background-color: white;
+    color: #5289C7;
+    border-radius: 11vh;
+    top: 50%;
+    width: 48%;
+    left: 50%;
+    height: 43%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+}
+
+/* כפתור האיקס */
+.exit {
+    position: absolute;
+    left: 5%;
+    top: 11%;
+    height: 10%;
+    width: 8%;
+    cursor: pointer;
+}
+  
+.exit:hover {
+    transform: scale(1.2);
+}
+
+/* מלל העזרה */
+.help-explanation-text {
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    align-items: center;
+    margin-left: 1%;
+    margin-right: 1%;
+    line-height: 6.5vh;
+    text-align: center;
+}
+
+.darked {
+    display: none;
+    background-color: rgba(86, 86, 86, 0.45);
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+}
+
+.div-board {
+    display: none;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 5%;
+}
+
+.div-exer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.p-question {
+    width: 70%;
+    font-size: 3vh;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    margin: 0%;
+    font-size: 3.5vh;
+    font-weight: 500;
+}
+
+.btn-answer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 2%;
+    cursor: pointer;
+}
+
+.check-button-true-or-false {
+    position: absolute;
+    display: none;
+    background-image: url("../assets/images/check.svg");
+    background-repeat: no-repeat;
+    width: 16%;
+    height: 12%;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, 0%);
+    opacity: 0.2;
+    filter: grayscale(1);
+    transition: opacity 2s ease;
+}
+
+.img-answers {
+    width: 90%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    width: 30%;
+}
+
+.end-game {
+    position: absolute;
+    display: none;
+    font-size: 8vh;
+    width: 61vh;
+    height: 56vh;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    border-radius: 11vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: #efc091;
+    transform: translate(-50%, -50%);
+}
+  
+.end-title {
+    color: #e8b04a;
+    text-align: center;
+    font-weight: 550;
+}
+
+.text-end {
+    color: #4d6aca;
+    text-align: center;
+    font-size: 5vh;
+}
+
+.next-button-place {
+    height: 20vh;
+    width: 17vw;
+    background-image: url("../assets/images/continue.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.button-end {
+    width: 46%;
+    height: 19%;
+    background-repeat: no-repeat;
+    bottom: 25%;
+    cursor: pointer;
+}

@@ -1,0 +1,121 @@
+/* דף עיצוב לעמוד הפתיחה */
+.body {
+    background-image: url("assets/images/bgopen.svg");
+    background-size: 100vw 100vh;
+    font-family: "Rubik";
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    user-select: none;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;  
+    direction: rtl;       
+}
+
+.logo1, .logo2 {
+    height: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 6%;
+    margin-bottom: 41%;
+}
+
+.logos {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    height: 45%;
+    width: 10%;
+    right: 0;
+    top: 6%;
+}
+
+/* כפתור התחל לומדה, כפתור אודות*/
+.button-start, .button-about  {
+    width: 30%;
+    height: 70%;
+}
+
+.soldier {
+    position: absolute;
+    width: 67%;
+    height: 217%;
+    right: -15.5%;
+    top: 18%;
+}
+
+.talk-bubble {
+    position: absolute;
+    width: 59%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 78%;
+    top: 7%;
+    left: 4%;
+    padding-left: 4%;
+    background-color: #fbfdfed6;
+}
+
+.buttons {
+    /* position: absolute; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 72%;
+    right: 22%;
+    height: 18%;
+    /* bottom: -6.5%; */
+    bottom: 0;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    cursor: pointer;
+}
+
+.title {
+    /* position: relative; */
+    color: #5289C7;
+    font-size: 10vh;
+    top: 10%;
+    right: 52%;
+    font-weight: 500;
+    width: 69%;
+}
+
+.explanations {
+    /* position: relative; */
+    width: 70%;
+    font-size: 3.5vh;
+    height: 55%;
+    top: 13%;
+    right: 26%;
+    line-height: 4vw;
+    color:  #394374;
+}
+
+/* מסך שחור של מעבר */
+.black {
+    position: absolute;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 3;
+}
+
+/* רמת סיווג */
+.classification {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    color: #5289C7;
+    font-size: 3.5vh;
+    font-weight: 550;
+}

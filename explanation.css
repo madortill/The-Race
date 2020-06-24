@@ -1,0 +1,65 @@
+/* מסך שחור של מעבר */
+.black {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 3;
+}
+
+.body {
+    background-image: url("assets/images/bgopen.svg");
+    background-size: 100vw 100vh;
+    font-family: "Rubik";
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    user-select: none;
+    direction: rtl;
+}
+
+.next {
+    position: absolute;
+    height: 13%;
+    width: 17%;
+    top: 71%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.next:hover {
+    transform: scale(1.05) translateX(-48%);
+}
+
+.white {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 66%;
+    background-color: rgba(255, 255, 255, 0.84);
+    transform: translate(-50%, -50%);
+    width: 61%;
+    border-radius: 11vh;
+    padding: 3%;
+}
+
+.white>p {
+    position: absolute;
+    top: 25%;
+    line-height: 9vh;
+    font-size: 7vh;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 82%;
+    text-align: center;
+    color: #394374;
+}
+
+.white> :first-child {
+    position: absolute;
+    font-size: 10vh;
+    right: 50%;
+    bottom: 67%;
+    transform: translateX(50%);
+    color: #5289C7;
+}

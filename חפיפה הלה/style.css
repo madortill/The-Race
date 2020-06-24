@@ -1,0 +1,88 @@
+/*start: master page */
+@font-face {
+  font-family: Noot;
+  src: url("assets/fonts/Noot_April13/Web Font/noot-aj.ttf"), url("assets/fonts/Noot_April13/Web Font/noot-aj.eot");
+}
+
+.body {
+  background: rgb(51,63,64);
+  background: linear-gradient(270deg, #627bce 0%, #20327b 100%);
+  margin: 0 auto;
+  font-family: "Assistant";
+  direction: rtl;
+  user-select: none;
+  color: #d1fbff;
+  overflow: hidden;
+}
+
+.button {
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px 3px rgba(44, 41, 41, 0.979);
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(1.04);
+  -webkit-transform: scale(1.04);
+  background: rgb(123,173,177);
+  background: linear-gradient(0deg, #7792ec 0%, rgba(166, 155, 255, 0.4) 100%);
+  transition: all 0.5s ease 0s;
+}
+
+.exercises-title {
+  text-align: center;
+  margin-top: 5%;
+  font-size: 9vh;
+}
+
+.check-button {
+  position: relative;
+  margin-top: 2%;
+  right: 42.5%;
+  width: 15%;
+  height: 90%;
+  font-size: 4vh;
+}
+
+/*end: master page */
+
+/* first page */
+
+  .title-first-page {
+  text-align: center;
+  margin-top: 7%;
+  font-size: 12vh;
+}
+
+.about {
+  position: absolute;
+  width: 8%;
+  height: 7%;
+  right: 3%;
+  top: 5%;
+  font-size: 3.5vh;
+}
+
+.buttons-container {
+  display: grid;
+  grid-gap: 15px;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  bottom: 5vh;
+}
+
+.start-practice {
+  width: 95%;
+  height: 27vh;
+  margin: 2%;
+  font-size: 5vh;
+}
+
+.list {
+  list-style-type: circle;
+}

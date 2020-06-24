@@ -1,0 +1,228 @@
+.body {
+    background-image: url("../assets/images/bgorganisefaded.svg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    margin: 0 auto;
+    font-family: "Rubik";
+    direction: rtl;
+    user-select: none;
+    color: #efc091;
+    overflow: hidden;
+    height: 100vh;  
+    transition: background-image 2s ease; 
+}
+
+/* מסך שחור של מעבר */
+.black {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 4;
+}
+
+.darked {
+    position: absolute;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: #4c4d4e75;
+    z-index: 1;
+}
+
+/* i כפתור עזרה */
+.help {
+    position: absolute;
+    width: 4vw;
+    height: 9vh;
+    top: 2.8%;
+    right: 1.8%;
+    z-index: 0;
+    cursor: pointer;
+}
+
+/* קונטיינר מסך העזרה */
+.help-explanation {
+    position: absolute;
+    font-size: 5vh;
+    padding: 3%;
+    background-color: white;
+    color: #5289C7;
+    border-radius: 11vh;
+    top: 50%;
+    width: 48%;
+    left: 50%;
+    height: 43%;
+    z-index: 4;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* כפתור האיקס */
+.exit {
+    position: absolute;
+    left: 5%;
+    top: 11%;
+    height: 10%;
+    width: 8%;
+    cursor: pointer;
+}
+  
+.exit:hover {
+    transform: scale(1.2);
+}
+
+/* מלל העזרה */
+.help-explanation-text {
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    align-items: center;
+    margin-left: 1%;
+    margin-right: 1%;
+    line-height: 7vh;
+}
+
+.sentences {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 84%;
+    top: 13%;
+}
+
+.titles {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-size: 7vh;
+    box-shadow: 0px 0px 29px rgba(73, 72, 72, 0.794);
+    height: 12%;  
+    font-weight: 500;
+    color: #3c82d6;
+    display: none;
+}
+
+.sort1-place {
+    top: 0%;
+    left: 24%;
+    width: 41%;
+    border-bottom-right-radius: 6vh;
+    border-bottom-left-radius: 6vh;
+}
+
+.sort2-place {
+    bottom: 0%;
+    left: 4%;
+    width: 42%;
+    border-top-right-radius: 6vh;
+    border-top-left-radius: 6vh;
+}
+
+.drag-sentences {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38%;
+    height: 16%;
+    margin: 4%;
+    border-radius: 3vh; 
+    font-size: 3vh;
+    color: #569aec;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.95);
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+
+.top {
+    position: absolute;
+    top: 12%;
+    left: 27.5%;
+    width: 32.5%;
+    height: 26%;
+}
+
+.bot {
+    position: absolute;
+    bottom: 16%;
+    left: 9%;
+    width: 32.5%;
+    height: 26%;
+}
+
+.drop-spot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.check-button-sorting-into-groups {
+    position: absolute;
+    top: 32%;
+    left: 4%;
+    width: 19%;
+    filter: grayscale(1);
+    opacity: 0.2;
+}
+
+.end-game {
+    position: absolute;
+    display: none;
+    font-size: 8vh;
+    width: 61vh;
+    height: 56vh;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    border-radius: 11vh;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: #efc091;
+    transform: translate(-50%, -50%);
+}
+  
+.end-title {
+    color: #e8b04a;
+    font-weight: 550;
+    text-align: center;
+}
+
+.text-end {
+    color: #4d6aca;
+    text-align: center;
+    font-size: 5vh;
+}
+
+.next-button-place {
+    height: 20vh;
+    width: 17vw;
+    background-image: url("../assets/images/continue.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.button-end {
+    width: 46%;
+    height: 19%;
+    background-repeat: no-repeat;
+    bottom: 25%;
+    cursor: pointer;
+}
+  
+.transparent-div {
+    position: absolute;
+    display: none;
+    z-index: 4;
+    height: 100%;
+    width: 100%;
+}
