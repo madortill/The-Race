@@ -9,6 +9,10 @@ $(function () {
     $('.button-start').on("click", function () {
         window.location.href = "explanation.html";
     });
+    $('.button-start').on("touchstart", function () {
+        window.location.href = "explanation.html";
+    });
+
 
     // button about event listener
     $('.button-about').on("click", function () {

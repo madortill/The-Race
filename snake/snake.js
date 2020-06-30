@@ -675,7 +675,8 @@ function finished() {
   clearTimeout(foodTimeOut); 
   clearTimeout(poisonTimeOut);
   clearInterval(move);
-  
+  sessionStorage.setItem('currentLevel', 1);
+
   $(".body").append('<div class="win-container"><p class="text-win-title">כל הכבוד!</p></div>');
   $(".win-container").append('<p class="text-win">עזרת לחייל להגיע אל האוטובוס הנכון!</p>');
   $(".win-container").append('<img src="../assets/images/continue.svg" class="button-next"/>');
