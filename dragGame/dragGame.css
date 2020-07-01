@@ -91,6 +91,7 @@
   top: 85.5%;
   left: 1.5%;
   background-image: url("../assets/images/check.svg");
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 

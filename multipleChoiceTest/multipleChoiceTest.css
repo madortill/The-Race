@@ -87,6 +87,7 @@
   position: absolute;
   display: none;
   background-image: url("../assets/images/check.svg");
+  background-repeat: no-repeat;
   top: 79%;
   left: 4.5%;
   height: 12%;
