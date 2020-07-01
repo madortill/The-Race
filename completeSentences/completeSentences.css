@@ -7,6 +7,7 @@
     font-family: "Rubik";
     direction: rtl;
     user-select: none;
+    -webkit-user-select: none;
     color: #efc091;
     overflow: hidden; 
     transition: background-image 2s ease;

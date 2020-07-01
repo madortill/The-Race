@@ -23,15 +23,15 @@ const whichExercises = [
     {
         game: "trueOrFalse",
         title: "נכון או לא נכון"
-    },
-    {
-        game: "snake",
-        title: "תפוס ת'אוטובוס"
-    },
-    {
-        game: "monopoly",
-        title: "מונופול"
     }
+    // {
+    //     game: "snake",
+    //     title: "תפוס ת'אוטובוס"
+    // },
+    // {
+    //     game: "monopoly",
+    //     title: "מונופול"
+    // }
 ];
 const AMOUNT_OF_EXERCISES = whichExercises.length; //לשנות בהתאם למספר התרגולים
 

@@ -267,6 +267,8 @@ function finished(ifFail) {
         $(".end-title").text("איי... כמעט");
         $(".try-again").show();
         $(".try-again").on("click", function(event) {
+            window.onbeforeunload = null;
+            window.onunload = null;
             location.reload();
         });
     }

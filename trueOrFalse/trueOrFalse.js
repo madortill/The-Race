@@ -181,17 +181,7 @@ function onCheckClick(event) {
             }
         }
     }
-    
-    // sending score to storage
-    setTimeout(function () {
-        // seding amount of correct answers
-        sessionStorage.setItem("score", nCorrectAnswers);
-
-        // sendinf number of questions
-        sessionStorage.setItem("numQuestions", NUMBER_OF_QUESTIONS);
-
-        finished();
-    }, 1500);
+    finished();
 }
 
 /*
@@ -210,25 +200,17 @@ function finished() {
         $("#btnRight_" + i).off("click");
         $("#btnWrong_" + i).off("click");
     }
+
     $(".check-button-true-or-false").off("click");
-    $(".div-board").remove();
-    $(".help").remove();
     $(".check-button-true-or-false").remove();
-    
-    // שינוי רקע
-    $(".body").css("background-image", "url('../assets/images/bgrightwrongfaded.svg')");
-    
-    // הצגת המסך על הדף
-    $(".end-game").fadeIn();
-    $(".end-game").css("display", "flex");
+    $(".next-btn-to-end").fadeIn(1000);
 
-    if (Number(nMistakes / NUMBER_OF_QUESTIONS * 100) >= 0.5) {
-        $(".end-title").text("איי... לא נורא");
-    }
+    // שומר כמות של תשובות נכונות 
+    sessionStorage.setItem("score", nCorrectAnswers);
 
-    // הוספת כפתור המשך
-    $(".button-end").css("background-image", "url('../assets/images/continue.svg')");
-    
+    // שומר מספר שאלות
+    sessionStorage.setItem("numQuestions", NUMBER_OF_QUESTIONS);
+
     let precentLostPoints = nMistakes / questions.length * 100;
     var arrScore = [];
     arrScore = JSON.parse(sessionStorage.getItem("arrScore")); 
@@ -236,12 +218,52 @@ function finished() {
     sessionStorage.setItem("arrScore", JSON.stringify(arrScore));
     
     // הוספת מאזין לחיצה לחזרה למסלול
-    $(".button-end").on("click", function(event) {
+    $(".next-btn-to-end").on("click", function(event) {
         window.onbeforeunload = null;
         window.onunload = null;
         sessionStorage.setItem("nCurrentExercise", Number(sessionStorage.getItem("nCurrentExercise")) + 1);
         window.location.href = "../lessonMap.html";
     });
+
+
+
+    // // ניקוי המסך מאלמנטים
+    // for (var i = 0; i < NUMBER_OF_QUESTIONS; i++) {
+    //     $("#btnRight_" + i).off("click");
+    //     $("#btnWrong_" + i).off("click");
+    // }
+    // $(".check-button-true-or-false").off("click");
+    // $(".div-board").remove();
+    // $(".help").remove();
+    // $(".check-button-true-or-false").remove();
+    
+    // // שינוי רקע
+    // $(".body").css("background-image", "url('../assets/images/bgrightwrongfaded.svg')");
+    
+    // // הצגת המסך על הדף
+    // $(".end-game").fadeIn();
+    // $(".end-game").css("display", "flex");
+
+    // if (Number(nMistakes / NUMBER_OF_QUESTIONS * 100) >= 0.5) {
+    //     $(".end-title").text("איי... לא נורא");
+    // }
+
+    // // הוספת כפתור המשך
+    // $(".button-end").css("background-image", "url('../assets/images/continue.svg')");
+    
+    // let precentLostPoints = nMistakes / questions.length * 100;
+    // var arrScore = [];
+    // arrScore = JSON.parse(sessionStorage.getItem("arrScore")); 
+    // arrScore.push(precentLostPoints);
+    // sessionStorage.setItem("arrScore", JSON.stringify(arrScore));
+    
+    // // הוספת מאזין לחיצה לחזרה למסלול
+    // $(".button-end").on("click", function(event) {
+    //     window.onbeforeunload = null;
+    //     window.onunload = null;
+    //     sessionStorage.setItem("nCurrentExercise", Number(sessionStorage.getItem("nCurrentExercise")) + 1);
+    //     window.location.href = "../lessonMap.html";
+    // });
 }
 
 // מטפל בריפרש
