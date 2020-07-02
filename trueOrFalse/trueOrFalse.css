@@ -1,23 +1,28 @@
 .body {
     background-image: url("../assets/images/bgrightwrongfaded.svg");
     background-repeat: no-repeat;
-    background-size: 100vw 100vh;
-    margin: 0 auto;
+    background-size: 100% 100%;
     font-family: "Rubik";
     direction: rtl;
     user-select: none;
     -webkit-user-select: none;
     color: #5289C7;
     overflow: hidden;
-    height: 100vh;  
     transition: background-image 2s ease; 
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /* מסך שחור של מעבר */
 .black {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: black;
     z-index: 3;
 }

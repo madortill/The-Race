@@ -38,7 +38,7 @@ const AMOUNT_OF_EXERCISES = whichExercises.length; //לשנות בהתאם למ�
 sessionStorage.setItem("num_of_exer", whichExercises.length); ////// צריך?
 
 var nCurrentExercise = 1;
-var nCurrentX = -5; // המיקום הראשוני של השחקן על המסך
+var nCurrentX = 0; // המיקום הראשוני של השחקן על המסך
 
 // ככה אני מקבלת את המערך השמור בסטורג
 // var arrScore = JSON.parse(sessionStorage.getItem("arrScore")); 
@@ -50,6 +50,8 @@ $(function () {
     if (sessionStorage.getItem("nCurrentExercise") !== null) {
         nCurrentExercise = Number(sessionStorage.getItem("nCurrentExercise"));
         nCurrentX = sessionStorage.getItem("nCurrentX");
+        if (!nCurrentX)
+            nCurrentX = window.innerWidth - $("#player").width();
 
         // לבטל את הטרנזישן כדי שבמעבר לשלב הבא הוא יתחיל ממיקומו האחרון
         $("#player").css("transition", "unset");

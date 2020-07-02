@@ -1,29 +1,33 @@
 .body {
     background-image: url("assets/images/bgopen.svg");
-    background-size: 100vw 100vh;
+    background-size: 100% 100%;
     font-family: "Rubik";
-    margin: 0 auto;
     background-repeat: no-repeat;
     user-select: none;
     -webkit-user-select: none;
     overflow: hidden;
     direction: rtl;
-    height: 100%;
+}
+
+html, body {
     width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .darked {
     position: relative;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: #80828580;
 }
 
 /* מסך שחור של מעבר */
 .black {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: black;
     z-index: 3;
 }

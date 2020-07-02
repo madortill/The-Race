@@ -194,6 +194,11 @@ function check(event) {
     // היו לו טעויות 
     else {
         setTimeout(function() {
+            $(".check-button-sorting-into-groups").css({
+               cursor: "auto",
+               opacity: "0.2" 
+            });
+            $(".check-button-sorting-into-groups").off("click");
             startOver()
         }, 3000);
     }
@@ -202,6 +207,7 @@ function check(event) {
 
 // הפונקציה תחזיר את האלמנטים הנגררים למיקומם ההתחלתי
 function startOver() {
+    nCountDropped = 0;
     $(".transparent-div").fadeOut();
     // 
     for (let nCount = 1; nCount <= AMOUNT_OF_SENTENCES; nCount++) {

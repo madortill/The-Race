@@ -8,7 +8,7 @@ var nCountCorrect = 0;
 var isFirstTime = true;
 var nMistakes = 0;
 
-$(function () {
+$(function () {  
     // מטפל במצב שבו השחקן לחץ על ריפרש
     handleRefresh();
 

@@ -6,14 +6,11 @@ $(function () {
     // חישוב ציון
     var sum = 0;
     var arrScore = JSON.parse(sessionStorage.getItem("arrScore")); 
-    console.log(arrScore);
     for (let i = 0; i < arrScore.length; i++) {
         sum += Number(arrScore[i]);
     };
     avg = sum / arrScore.length;
-    console.log(avg + " avg");
     let score = 100 - avg;
-    console.log(score + " score");
 
     $(".grade").text( "ציונך הסופי: " + Math.round(score));
     
