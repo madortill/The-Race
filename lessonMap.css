@@ -70,6 +70,7 @@ html, body {
     height: 20vh;
     top: 76vh;
     left: 100%;
+    pointer-events: none;
 }
 
 .title-container {

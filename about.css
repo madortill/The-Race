@@ -1,4 +1,4 @@
-.body {
+body {
     background-image: url("assets/images/bgopen.svg");
     background-size: 100% 100%;
     font-family: "Rubik";
@@ -47,7 +47,7 @@ html, body {
     color: #5289C7;
     background-color: #fff;
     transform: translate(-50%, -50%);
-    line-height: 3vh;
+    line-height: 1vh;
 }
 
 .white-container >:first-child {
