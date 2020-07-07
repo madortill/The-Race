@@ -80,6 +80,17 @@ $(function () {
     }, 2000);
 
 });
+function onportrait() {
+    movePlayer();
+    $(".place-icon").css({height: "16vw"});
+    $(".place-icon.current-exercise").css({bottom: "3vw"});
+}
+
+function onlandscape() {
+    movePlayer();
+    $(".place-icon").css({height: ""});
+    $(".place-icon.current-exercise").css({bottom: ""});
+}
 
 function movePlayer() {
     // הוספת טרנזישן כאן כדי שרק לאחר שהשחקן יתמקם אז הוא יעשה את אנימציית התזוזה
