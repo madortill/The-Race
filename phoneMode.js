@@ -1,3 +1,10 @@
+// ספריית אופליין, מאפשרת פתיחה של הדף ללא אינטרנט וללא מחיקה של הקאש כל פעם מחדש
+if('serviceWorker' in navigator && location.hostname !== 'localhost'){
+    let location = "../"
+    navigator.serviceWorker.register(location + 'sw.js');
+}
+
+
 // דף קולי שמסדר בעזרת השם את הבעיה בטלפונים שהמסך יהיה רק לרוחב
 $(function () {
     if ('ontouchstart' in document) {
