@@ -23,7 +23,6 @@ $(function () {
                     document.documentElement.style.height = "";
                 }
             });
-        })
-        );
+        });
     }
 });
