@@ -9,7 +9,7 @@ if ('serviceWorker' in navigator && location.hostname !== 'localhost') {
 $(function () {
     if ('ontouchstart' in document) {
         window.matchMedia("(orientation: portrait)").addListener(function (e) {
-            if (!this.matches) {
+            if (this.matches) {
                 document.documentElement.style.transform = "translate(calc(-100% + 100vw)) rotateZ(-90deg) translate(100%)";
                 document.documentElement.style.transformOrigin = "top right";
                 document.documentElement.style.left = "0";
