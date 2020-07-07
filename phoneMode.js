@@ -9,15 +9,15 @@ if ('serviceWorker' in navigator && location.hostname !== 'localhost') {
 $(function () {
     if ('ontouchstart' in document) {
         let media = window.matchMedia("(orientation: portrait)");
-        media.addListener(oriente);
-        function oriente(e) {
+        media.addListener(orient);
+        function orient(e) {
             if (this.matches) {
                 document.documentElement.style.transform = "translate(calc(-100% + 100vw)) rotateZ(90deg) translate(100%)";
                 document.documentElement.style.transformOrigin = "top right";
                 document.documentElement.style.left = "0";
                 document.documentElement.style.position = "absolute";
-                document.documentElement.style.width = `${window.innerHeight}px`;
-                document.documentElement.style.height = `${window.innerWidth}px`;
+                document.documentElement.style.width = `${document.documentElement.clientHeight}px`;
+                document.documentElement.style.height = `${document.documentElement.clientWidth}px`;
                 if(window.onportrait) onportrait();
                 e.preventDefault();
             } else {
@@ -30,6 +30,6 @@ $(function () {
                 document.documentElement.style.height = ``;
             }
         }
-        oriente.apply(media, new Event("orientationchange"));
+        orient.apply(media, new Event("orientationchange"));
     }
 });
