@@ -98,19 +98,19 @@ html, body {
     top: 10%;
     right: 52%;
     font-weight: 500;
-    width: 69%;
+    width: 70%;
 }
 
 .explanations {
     /* position: relative; */
     width: 70%;
     font-size: 3.5vh;
-    font-size: min(3.4vmin, 2.5vmax);
+    font-size: min(4.4vmin, 3.5vmax);
     height: 55%;
     top: 13%;
     right: 26%;
-    line-height: 4vw;
-    color:  #394374;
+    line-height: 3vw;
+    color: #394374;
 }
 
 /* מסך שחור של מעבר */
