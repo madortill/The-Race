@@ -8,11 +8,10 @@ if('serviceWorker' in navigator && location.hostname !== 'localhost'){
 // דף קולי שמסדר בעזרת השם את הבעיה בטלפונים שהמסך יהיה רק לרוחב
 $(function () {
     if ('ontouchstart' in document) {
-        var promise = document.body.requestFullscreen();
-        promise.then(() => {
-            screen.orientation.lock("landscape");
-        }, () => {
-            window.matchMedia("(orientation: portrait) or (orientation: portrait-primary)").addListener(function() {
+        document.body.requestFullscreen().then(null, console.log);
+        screen.orientation.lock("landscape").than(null, e => {
+            console.log(e);
+            window.matchMedia("(orientation: portrait)").addListener(function() {
                 if (!this.matches) {
                     document.documentElement.style.transform = `rotateY(-90deg)`;
                     document.documentElement.style.width = "100vh";
@@ -25,5 +24,6 @@ $(function () {
                 }
             });
         })
+        );
     }
 });
