@@ -81,15 +81,16 @@ $(function () {
 
 });
 function onportrait() {
-    movePlayer();
     $(".place-icon").css({height: "16vw"});
     $(".place-icon.current-exercise").css({bottom: "3vw"});
+    let player = $(".player");
+    player.css({left: parseFloat(player.css("left")) / window.innerWidth * window.innerHeight})
 }
 
 function onlandscape() {
-    movePlayer();
     $(".place-icon").css({height: ""});
     $(".place-icon.current-exercise").css({bottom: ""});
+    movePlayer();
 }
 
 function movePlayer() {
@@ -124,7 +125,7 @@ function movePlayer() {
 
 function addTitle() {
     $(".title-container").text(whichExercises[nCurrentExercise - 1].title);
-    $(".title-container").slideToggle(1500);
+    $(".title-container").slideDown(1500);
 }
 
 // פונקציה לרגע שנלחץ על התרגול המבוקש
