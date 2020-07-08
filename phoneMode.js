@@ -5,6 +5,9 @@ $(function () {
         media.addListener(orient);
         function orient(e) {
             if (media.matches) {
+                document.body.style.display = "block";
+                void document.body.offsetWidth;
+                document.body.style.display = "";
                 document.documentElement.style.transform = "translate(calc(-100% + 100vw)) rotateZ(90deg) translate(100%)";
                 document.documentElement.style.transformOrigin = "top right";
                 document.documentElement.style.left = "0";
