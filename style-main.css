@@ -75,14 +75,12 @@ html, body {
 }
 
 .buttons {
-    /* position: absolute; */
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 72%;
     right: 22%;
     height: 18%;
-    /* bottom: -6.5%; */
     bottom: 0;
 }
 
@@ -93,9 +91,8 @@ html, body {
 }
 
 .title {
-    /* position: relative; */
     color: #5289C7;
-    font-size: 10vh;
+    font-size: 5vmax;
     top: 10%;
     right: 52%;
     font-weight: 500;
@@ -103,14 +100,11 @@ html, body {
 }
 
 .explanations {
-    /* position: relative; */
     width: 70%;
-    font-size: 3.5vh;
-    font-size: min(4vmin, 2vmax);
-    height: 55%;
-    top: 13%;
-    right: 26%;
-    line-height: 2.9vw;
+    font-size: 4vh;
+    font-size: min(4vmin, 3vmax);
+    min-height: 55%;
+    line-height: 3vmax;
     color: #394374;
 }
 
@@ -130,6 +124,6 @@ html, body {
     top: 2%;
     right: 2%;
     color: #5289C7;
-    font-size: 3.5vh;
+    font-size: 2.5vmax;
     font-weight: 550;
 }

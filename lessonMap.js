@@ -43,8 +43,6 @@ var nCurrentX = 0; // המיקום הראשוני של השחקן על המסך
 // ככה אני מקבלת את המערך השמור בסטורג
 // var arrScore = JSON.parse(sessionStorage.getItem("arrScore")); 
 
-
-
 $(function () {
     // התנאי בודק - האם כבר היו בעמוד הזה קודם
     if (sessionStorage.getItem("nCurrentExercise") !== null) {

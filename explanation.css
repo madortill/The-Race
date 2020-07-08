@@ -53,21 +53,23 @@ html, body {
 
 .white>p {
     position: absolute;
-    top: 25%;
-    line-height: 9vh;
+    top: 29%;
+    line-height: 7vh;
     font-size: 7vh;
+    font-size:  min(7vmin, 4vmax);
     transform: translateX(-50%);
     left: 50%;
     width: 82%;
     text-align: center;
     color: #394374;
+    line-height: 5vmax;
 }
 
 .white> :first-child {
     position: absolute;
-    font-size: 10vh;
+    font-size: 6vmax;
     right: 50%;
-    bottom: 67%;
+    bottom: 55%;
     transform: translateX(50%);
     color: #5289C7;
 }
