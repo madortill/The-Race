@@ -7,6 +7,7 @@ body {
     -webkit-user-select: none;
     direction: rtl;
     overflow: hidden;
+    display: inline-block;
 }
 
 html, body {

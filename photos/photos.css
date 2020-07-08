@@ -9,6 +9,7 @@
     color: #efc091;
     overflow: hidden;
     transition: background-image 1s ease; 
+    display: inline-block;
 }
 
 html, body {

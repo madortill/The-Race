@@ -8,6 +8,7 @@
   -webkit-user-select: none;
   overflow: hidden;
   transition: background-image 2s ease;
+  display: inline-block;
 }
 
 html, body {
