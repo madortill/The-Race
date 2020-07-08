@@ -48,7 +48,7 @@ html, body {
     color: #5289C7;
     background-color: #fff;
     transform: translate(-50%, -50%);
-    line-height: 2vmin;
+    line-height: 1em;
 }
 
 .white-container >:first-child {
@@ -62,7 +62,7 @@ html, body {
 }
 
 .row {
-    margin: 2.6%;
+    margin: 1.6%;
 }
 
 .row > p {
