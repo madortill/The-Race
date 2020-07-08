@@ -81,8 +81,7 @@ $(function () {
 function onportrait() {
     $(".place-icon").css({height: "16vw"});
     $(".place-icon.current-exercise").css({bottom: "3vw"});
-    let player = $(".player");
-    player.css({left: parseFloat(player.css("left")) / window.innerWidth * window.innerHeight})
+    movePlayer(true);
 }
 
 function onlandscape() {
@@ -91,7 +90,7 @@ function onlandscape() {
     movePlayer();
 }
 
-function movePlayer() {
+function movePlayer(yAxis = false) {
     // הוספת טרנזישן כאן כדי שרק לאחר שהשחקן יתמקם אז הוא יעשה את אנימציית התזוזה
     $("#player").css("transition", "2s  cubic-bezier(0, 0.26, 0.43, 0.92) left");
 
@@ -99,7 +98,10 @@ function movePlayer() {
     if (nCurrentExercise <= AMOUNT_OF_EXERCISES) {
         let exer = $("#exer" + nCurrentExercise);
         let bounds = exer[0].getBoundingClientRect();
-        nCurrentX = bounds.x + bounds.width / 2;
+        if (yAxis) 
+            nCurrentX = bounds.y + bounds.height / 2;
+        else 
+            nCurrentX = bounds.x + bounds.width / 2;
 
         $("#player").css("left", nCurrentX + "px");
 

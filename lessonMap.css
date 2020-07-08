@@ -22,22 +22,6 @@ html, body {
     margin-bottom: 1%;
 }
 
-#home {
-    position: absolute;
-    width: 15%;
-    height: 20%;
-    top: 72%;
-    right: 84%;
-}
-
-#army {
-    position: absolute;
-    width: 15vw;
-    height: 19vh;
-    top: 72vh;
-    right: 1vw;
-}
-
 .exercises-container {
     position: absolute;
     display: flex;
@@ -45,9 +29,6 @@ html, body {
     width: 70%;
     height: 21%;
     bottom: 0%;
-    /* padding-right: 18%; */
-    /* padding-left: 20%; */
-    /* transform: translate(-50%, -50%); */
     justify-content: space-evenly;
     margin: 0 15%;
 }
@@ -79,15 +60,15 @@ html, body {
     position: relative;
     display: none;
     padding-top: 1.9%;
-    font-size: 10vh;
+    font-size: 12vmin;
     font-weight: 600;
     text-align: center;
-    height: 17vh;
+    height: 21vmin;
     width: 100%;
     color: #394374;
     background-color: rgba(255, 255, 255, 0.521);
-    border-bottom-right-radius: 70px;
-    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 11vmin;
+    border-bottom-left-radius: 11vmin;
     transition: height 1.5s ease;
     transition: background-color 1.5s ease;
     box-shadow: 0 24px 24px #cecece24;
