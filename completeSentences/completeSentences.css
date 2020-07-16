@@ -1,14 +1,9 @@
 body {
-    background-image: url("../assets/images/bgdragfaded.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
     font-family: "Rubik";
-    direction: rtl;
     user-select: none;
     -webkit-user-select: none;
     color: #efc091;
     overflow: hidden; 
-    transition: background-image 2s ease;
     display: inline-block;
 }
 
@@ -16,7 +11,18 @@ html, body {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0;    
+    direction: rtl;
+}
+
+.container-all {
+    background-image: url("../assets/images/bgdragfaded.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 /* מסך שחור של מעבר */
@@ -157,7 +163,7 @@ html, body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 12vh;
+    height: 12vmin;
     color: #efc091;
     cursor: pointer;
     padding-top: 1%;
@@ -169,8 +175,8 @@ html, body {
 }
   
 .next-button-place {
-    height: 20vh;
-    width: 17vw;
+    height: 20vmin;
+    width: 17vmax;
     background-image: url("../assets/images/continue.svg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -179,14 +185,14 @@ html, body {
 .end-game {
     position: absolute;
     display: none;
-    font-size: 8vh;
-    width: 61vh;
-    height: 56vh;
+    font-size: 8vmin;
+    width: 42vmax;
+    height: 50vmin;
     background-color: white;
     top: 50%;
     left: 50%;
     z-index: 1;
-    border-radius: 17%;
+    border-radius: 11vmin;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -202,7 +208,7 @@ html, body {
 }
   
   .button-end {
-    width: 46%;
+    width: 35%;
     height: 19%;
     background-repeat: no-repeat;
     bottom: 25%;

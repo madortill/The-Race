@@ -119,7 +119,7 @@ function addElements() {
     shuffle(questionsAndAnswers);
 
     // שינוי רקע
-    $(".body").css("background-image", "url('../assets/images/bgamerican.svg')");
+    $(".container-all").css("background-image", "url('../assets/images/bgamerican.svg')");
     
     // הוספת מיקומי תשובות
     $(".ans-container").fadeIn(500);
@@ -286,7 +286,7 @@ function finished() {
     $(".help").remove();
 
     // שינוי רקע
-    $(".body").css("background-image", "url('../assets/images/bgamericanfaded.svg')");
+    $(".container-all").css("background-image", "url('../assets/images/bgamericanfaded.svg')");
      
     //  הוספת מסך סיום לדף
     $(".end-game").fadeIn();

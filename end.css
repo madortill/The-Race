@@ -1,8 +1,5 @@
 body {
-    background-image: url("assets/images/bgendscreen.svg");
-    background-size: 100% 100%;
     font-family: "Rubik";
-    background-repeat: no-repeat;
     user-select: none;
     -webkit-user-select: none;
     overflow: hidden;
@@ -16,6 +13,15 @@ html, body {
     padding: 0;
 }
 
+.container-all {
+    background-image: url("assets/images/bgendscreen.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 .logo {
     position: absolute;
     width: 6%;
@@ -34,7 +40,7 @@ html, body {
 }
 .grade {
     position: relative;
-    font-size: 6vh;
+    font-size: 6vmin;
     color: #394374;
 }
 
@@ -56,17 +62,17 @@ html, body {
     width: 39.7%;
     height: 32.6%;
     padding: 2%;
-    line-height: 8vh;
+    line-height: 8vmin;
 }
 .title {
-    font-size: 9vh;
+    font-size: 9vmin;
     color: #5289C7;
     font-weight: 500;
 }
 
 .contant {
     padding-top: 4%;
-    font-size: 4.5vh;
+    font-size: 4.5vmin;
     font-weight: 500;
     color: #394374;
 }
@@ -78,11 +84,4 @@ html, body {
     height: 100%;
     background-color: black;
     z-index: 3;
-}
-
-.container-all {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
 }

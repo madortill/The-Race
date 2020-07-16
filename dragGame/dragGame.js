@@ -75,7 +75,7 @@ $(function() {
 
 function addElements() {
     // שינוי רקע
-    $(".body").css("background-image", "url('../assets/images/bgorder.svg')");
+    $(".container-all").css("background-image", "url('../assets/images/bgorder.svg')");
     
     $(".question-conatiner").slideToggle(1500);
     $(".question-conatiner").css("display", "flex");
@@ -110,9 +110,29 @@ function addElements() {
         $(".wood-img").css("height", heightWood);
 
     $("#sortable").sortable({
-        containment: ".ans-conatisner-drag-game",
+        axis: rotation.angle === 0 ? "x" : "y",
+        create: start,
+        activate: start,
+        sort: function (e, ui) {
+            if (!rotation.angle) {
+                transformDrag(e, ui);
+                ui.helper.css({top: ui.position.top + e.target.clientHeight - ui.helper.height() / 2});
+                // ui.helper.css({left: ui.position.left + ui.helper.data("offset").left,
+                //                top: ui.position.top + ui.helper.data("offset").top});
+            }
+        }, 
         scroll: false
     });
+
+    function start() {
+        if (!rotation.angle){
+            let items = $(this).data('ui-sortable').items;
+            items.forEach(transform);
+            items.forEach(item => item.left += item.width / 2);
+            $(this).data('ui-sortable').items = items;
+        }
+    }
+
     $("#sortable").disableSelection();
 
     // add event listener to the check button
@@ -182,7 +202,7 @@ function finished() {
     $(".check-button-drag-game").remove();
     
     // שינוי רקע
-    $(".body").css("background-image", "url('../assets/images/bgorderfaded.svg')");
+    $(".container-all").css("background-image", "url('../assets/images/bgorderfaded.svg')");
 
     // הוספת כפתור המשך
     $(".button-end").css("background-image", "url('../assets/images/continue.svg')");
@@ -238,10 +258,10 @@ function handleRefresh() {
         location.assign("../main.html");
         return;
     }
-    window.onbeforeunload = e => true;
+    // window.onbeforeunload = e => true;
     
-    window.onunload = e => {
-        sessionStorage.clear();
-        sessionStorage.setItem("restart", true);
-    }
+    // window.onunload = e => {
+    //     sessionStorage.clear();
+    //     sessionStorage.setItem("restart", true);
+    // }
 }

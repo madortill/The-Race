@@ -1,5 +1,5 @@
 // ספריית אופליין, מאפשרת פתיחה של הדף ללא אינטרנט וללא מחיקה של הקאש כל פעם מחדש
-if ('serviceWorker' in navigator && location.hostname !== 'localhost') {
+if ('serviceWorker' in navigator && location.hostname !== 'localhost' && location.hostname !== "127.0.0.1") {
     let location = ""
     navigator.serviceWorker.register(location + 'sw.js');
 }

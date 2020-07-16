@@ -17,13 +17,14 @@ const whichExercises = [
         title: "בחירת תמונות"
     },
     {
-        game: "dragGame",
-        title: "גרירה לפי סדר"
-    },
-    {
         game: "trueOrFalse",
         title: "נכון או לא נכון"
+    },
+    {
+        game: "dragGame",
+        title: "גרירה לפי סדר"
     }
+   
     // {
     //     game: "snake",
     //     title: "תפוס ת'אוטובוס"

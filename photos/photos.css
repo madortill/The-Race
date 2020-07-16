@@ -1,14 +1,10 @@
 .body {
-    background-image: url("../assets/images/bgphotosfaded.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
     font-family: "Rubik";
     direction: rtl;
     user-select: none;
     -webkit-user-select: none;
     color: #efc091;
     overflow: hidden;
-    transition: background-image 1s ease; 
     display: inline-block;
 }
 
@@ -17,6 +13,16 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+}
+
+.container-all {
+    background-image: url("../assets/images/bgphotosfaded.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 /* מסך שחור של מעבר */
@@ -31,8 +37,8 @@ html, body {
 /* i כפתור עזרה */
 .help {
     position: absolute;
-    width: 4vw;
-    height: 9vh;
+    width: 4vmax;
+    height: 9vmin;
     top: 2.8%;
     right: 1.358%;
     z-index: 0;
@@ -42,11 +48,11 @@ html, body {
 /* קונטיינר מסך העזרה */
 .help-explanation {
     position: absolute;
-    font-size: 5vh;
+    font-size: 5vmin;
     padding: 3%;
     background-color: white;
     color: #5289C7;
-    border-radius: 11vh;
+    border-radius: 11vmin;
     top: 50%;
     width: 53%;
     left: 50%;
@@ -75,7 +81,7 @@ html, body {
     justify-content: center;
     height: 83%;
     align-items: center;
-    line-height: 7vh;
+    line-height: 7vmin;
     text-align: center;
 }
 
@@ -115,7 +121,7 @@ html, body {
 .p-title {
     position: absolute;
     display: none;
-    font-size: 5.5vh;
+    font-size: 5.5vmin;
     font-weight: 500;
     top: 23%;
     left: 49%;
@@ -127,22 +133,22 @@ html, body {
 }
 
 .end-game-fail {
-  position: absolute;
-  display: none;
-  font-size: 8vh;
-  width: 61vh;
-  height: 56vh;
-  background-color: white;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  border-radius: 11vh;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  color: #efc091;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    display: none;
+    font-size: 8vmin;
+    width: 42vmax;
+    height: 50vmin; 
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    border-radius: 11vmin;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: #efc091;
+    transform: translate(-50%, -50%);
 }
 
 .end-game-success {
@@ -221,7 +227,7 @@ html, body {
 .score,
 .points {
   position: relative;
-  font-size: 5vh;
+  font-size: 5vmin;
   margin: 2%;
 }
   
@@ -245,9 +251,9 @@ html, body {
 .img-btn {
     width: 100%;
     height: 100%;
-    border-radius: 3vh;
+    border-radius: 3vmin;
     transition: all 0.4s ease 0s;
-    border: solid 0.5vw transparent;
+    border: solid 0.5vmax transparent;
     cursor: pointer;
 }
 
@@ -261,15 +267,15 @@ html, body {
 .feedback-container {
     position: absolute;
     display: none;
-    font-size: 8vh;
-    width: 61vh;
+    font-size: 8vmin;
+    width: 61vmin;
     height: 51%;
     background-color: white;
     top: 50%;
     left: 50%;
     padding-top: 2%;
     z-index: 1;
-    border-radius: 17%;
+    border-radius: 11vmin;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -279,7 +285,7 @@ html, body {
 }
 
 .feedback-title {   
-    font-size: 8vh;
+    font-size: 8vmin;
     font-weight: 450;    
     text-align: center;    
     margin: 5%;   
@@ -293,12 +299,12 @@ html, body {
     height: 50%;
     margin: 0%;
     padding: 1% 10%;
-    font-size: 4vh;
+    font-size: 4vmin;
     text-align: center;
     font-weight: 500;
     position: relative;
     top: 10%;
-    line-height: 5vh;
+    line-height: 5vmin;
 }
 
 /* כפתור האיקס */
@@ -329,7 +335,7 @@ html, body {
 .img-expel {
     width: 18%;
     height: 100%;
-    border-radius: 3vh;
+    border-radius: 3vmin;
     margin-top: 1%;
     margin-bottom: 1%;
     margin-left: 4%;
@@ -340,7 +346,7 @@ html, body {
     justify-content: right;
     align-items: center;
     color: #273958;
-    font-size: 3.5vh;
+    font-size: 3.5vmin;
     font-weight: 450;
     width: 154%;
 }
@@ -356,7 +362,7 @@ html, body {
     color: #FBB040;
     position: absolute;
     display: none;
-    font-size: 6vh;
+    font-size: 6vmin;
     font-weight: 500;
     top: 16.7%;
     left: 16%;
@@ -369,7 +375,7 @@ html, body {
     width: 72.8%;
     height: 11%;
     color: #273958;
-    font-size: 5.5vh;
+    font-size: 5.5vmin;
     position: absolute;
     top: 24%;
     right: 14.6%;

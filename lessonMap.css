@@ -1,8 +1,5 @@
 body {
-    background-image: url("assets/images/bgmap.svg");
-    background-size: 100% 100%;
     font-family: "Rubik";
-    background-repeat: no-repeat;
     user-select: none;
     -webkit-user-select: none;
     direction: rtl;
@@ -17,8 +14,18 @@ html, body {
     padding: 0;
 }
 
+.container-all {
+    background-image: url("assets/images/bgmap.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 .place-icon {
-    height: 16vh;
+    height: 16vmin;
     margin-bottom: 1%;
 }
 
@@ -37,7 +44,7 @@ html, body {
 .current-exercise {
     position: relative;
     transform: scale(1.4);
-    bottom: 3vh;
+    bottom: 3vmin;
     cursor: pointer;
 }
 

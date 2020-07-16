@@ -55,7 +55,7 @@ $(function () {
 
 function addElements() {
     // שינוי רקע
-    $(".body").css("background-image", "url('../assets/images/bgpicture.svg')");
+    $(".container-all").css("background-image", "url('../assets/images/bgpicture.svg')");
     
     // מוסיף את הגלילה לדיב התמונות
     if (NUMBER_OF_IMAGES < 6) {
@@ -259,7 +259,7 @@ function finished(ifFail) {
     }
     else {
         // שינוי רקע
-        $(".body").css("background-image", "url('../assets/images/bgphotosfaded.svg')");
+        $(".container-all").css("background-image", "url('../assets/images/bgphotosfaded.svg')");
      
         //  הוספת מסך סיום נכשל לדף
         $(".end-game-fail").fadeIn();

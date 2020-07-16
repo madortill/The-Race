@@ -131,19 +131,19 @@ $(function () {
 function addElements() {
     
     // שינוי רקע
-    $(".body").css("background-image", "url('../assets/images/bgCompleteSen.svg')");
+    $(".container-all").css("background-image", "url('../assets/images/bgCompleteSen.svg')");
 
     // Sentences
     elSentencesContainer = document.createElement("div");
     elSentencesContainer.className = "sentences-ans-container";
-    $(".body").append(elSentencesContainer);
+    $(".container-all").append(elSentencesContainer);
 
-    $(".body").append("<div class='sentences'></div>");
+    $(".container-all").append("<div class='sentences'></div>");
 
     // Word bank
     elWordBankContainer = document.createElement("div");
     elWordBankContainer.className = "word-bank-container";
-    $(".body").append(elWordBankContainer);
+    $(".container-all").append(elWordBankContainer);
 
     //
     elTitleWordBank = document.createElement("div");
@@ -161,11 +161,11 @@ function addElements() {
 
     $('.missing-word-design').draggable({
         revert: "invalid",
-        containment: ".body",
+        drag: transformDrag, 
+        // containment: ".container-all",
         scroll: false
     });
 }
-
 /*
                 addSentence
               ================
@@ -273,7 +273,7 @@ function finished() {
     $(".help").remove();
 
     // שינוי רקע
-    $(".body").css("background-image", "url('../assets/images/bgdragfaded.svg')");
+    $(".container-all").css("background-image", "url('../assets/images/bgdragfaded.svg')");
 
     // הוספת כפתור המשך
     $(".button-end").css("background-image", "url('../assets/images/continue.svg')");

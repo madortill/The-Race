@@ -1,13 +1,9 @@
-.body {
-  background-image: url("../assets/images/bgorderfaded.svg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+body {
   font-family: "Rubik";
   direction: rtl;
   user-select: none;
   -webkit-user-select: none;
   overflow: hidden;
-  transition: background-image 2s ease;
   display: inline-block;
 }
 
@@ -17,6 +13,17 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+.container-all {
+  background-image: url("../assets/images/bgorderfaded.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 
 /* מסך שחור של מעבר */
 .black {
@@ -50,11 +57,11 @@ html, body {
 /* קונטיינר מסך העזרה */
 .help-explanation {
   position: absolute;
-  font-size: 5vh;
+  font-size: 5vmin;
   padding: 3%;
   background-color: white;
   color: #5289C7;
-  border-radius: 11vh;
+  border-radius: 11vmin;
   top: 50%;
   width: 48%;
   left: 50%;
@@ -86,7 +93,7 @@ html, body {
   align-items: center;
   margin-left: 1%;
   margin-right: 1%;
-  line-height: 5vh;
+  line-height: 5vmin;
 }
 
 /* כפתור הבדיקה */
@@ -111,14 +118,14 @@ html, body {
   padding-top: 0.8%;
   padding-bottom: 3%;
   font-weight: 500;
-  font-size: 3.5vh;
+  font-size: 3.5vmin;
   top: 0%;
   left: 0%;
   height: 5%;
   width: 47%;
   color: #3c82d6;
   background-color: #fffefe;
-  border-bottom-right-radius: 5vh;
+  border-bottom-right-radius: 5vmin;
   box-shadow: 15px 8px 24px #5655558a;
   z-index: 2;
 }
@@ -132,8 +139,8 @@ html, body {
   box-shadow: 15px 8px 24px #5655558a;
   color: #537435;
   background-color: #fffefe;
-  border-bottom-left-radius: 5vh;
-  border-top-left-radius: 5vh;
+  border-bottom-left-radius: 5vmin;
+  border-top-left-radius: 5vmin;
   width: 10%;
   height: 70%;
   top: 16%;
@@ -154,7 +161,7 @@ html, body {
 #sortable li {
   width: 100%;
   margin: -3%;
-  font-size: 3.5vh;
+  font-size: 3.5vmin;
 }
 
 .ans-conatisner-drag-game {
@@ -198,21 +205,21 @@ html, body {
 }
 
 .end-complete-sentences {
-  font-size: 8vh;
+  font-size: 8vmin;
 }
 
 .tryAgain-button-place {
   position: relative;
-  height: 11vh;
+  height: 11vmin;
   width: 18%;
   background-color: rgb(153, 177, 255);
-  font-size: 4vh;
+  font-size: 4vmin;
 }
 
 .rod {
   position: absolute;
   background-color: #664126;
-  border-radius: 5vh;
+  border-radius: 5vmin;
   width: 2.5%;
   height: 102.5%;
   top: 0;
@@ -228,7 +235,7 @@ html, body {
 }
 
 .range-side-text {
-  font-size: 5vh;
+  font-size: 5vmin;
   padding-top: 16%;
   padding-bottom: 16%;
 }
@@ -236,14 +243,14 @@ html, body {
 .end-game {
   position: absolute;
   display: none;
-  font-size: 8vh;
-  width: 61vh;
-  height: 56vh;
+  font-size: 8vmin;
+  width: 42vmax;
+  height: 50vmin;
   background-color: white;
   top: 50%;
   left: 50%;
   z-index: 1;
-  border-radius: 11vh;
+  border-radius: 11vmin;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -259,7 +266,7 @@ html, body {
 }
 
 .button-end {
-  width: 46%;
+  width: 35%;
   height: 19%;
   background-repeat: no-repeat;
   bottom: 25%;
