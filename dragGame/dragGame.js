@@ -117,15 +117,24 @@ function addElements() {
 }
 
 
+/**
+ * This function is called every time users rotates their phone.
+ */
 function handleOrientation() {
+    // If it's called before the player exited the Intro message 
     if (!$("#sortable").length) return;
-    if($("#sortable").sortable('instance'))
+    // If there was a sortable before destroy it and create a new one
+    // This is important for when a device rotates.
+    if ($("#sortable").sortable('instance'))
         $("#sortable").sortable('destroy');
+    // Create a sortable
     $("#sortable").sortable({
+        // If it's rotates to landscape use the x Axis instead of y
         axis: rotation.angle === 0 ? "x" : "y",
         containment: ".ans-conatisner-drag-game",
         create: start,
         activate: start,
+        // Transforms the cordinates of the dragged element to the position on screen.
         sort: function (e, ui) {
             if (!rotation.angle) {
                 transformDrag(e, ui);
@@ -134,19 +143,22 @@ function handleOrientation() {
         }, 
         scroll: false
     });
+    // Recalculates the height of the wood boards 
     heightWood = $("#sortable").height() / AMOUNT_OF_ANSWERS - 0;
     $(".wood-img").css("height", heightWood);
     $(".list-drag").each((i, el) => {
         $("#sortable").children()[AMOUNT_OF_ANSWERS - 1 - i].after(el);
     });
 
-    
+    // Flips the direction of the sortable because JQeury is *smart* and assumes the elements will be in the oposite direction.
     if (rotation.angle)
         $("#sortable").css("flexDirection", "");
     else
         $("#sortable").css("flexDirection", "column-reverse");
 
+    
     function start(e) {
+        // Fixes the containment of the sortable to fit the rotated position of the container.
         let sort = $(e.target).sortable('instance');
         if (sort.containment) {
             let container = $($(e.target).sortable('option', 'containment'));
@@ -173,6 +185,7 @@ function handleOrientation() {
             transform(new RectView(sort.containment));
         }
     
+        // Translates the size of the items to reflect their rotation.
         if (!rotation.angle){
             let items = $(this).data('ui-sortable').items;
             items.forEach(i => transform(new SizeView(i)));
@@ -180,10 +193,7 @@ function handleOrientation() {
         }
     }
 }
-window.onlandscape = function() {
-    handleOrientation();
-
-}
+window.onlandscape = handleOrientation;
 window.onportrait = handleOrientation;
 /*
              checkSortable
@@ -306,10 +316,10 @@ function handleRefresh() {
         location.assign("../main.html");
         return;
     }
-    // window.onbeforeunload = e => true;
+    window.onbeforeunload = e => true;
     
-    // window.onunload = e => {
-    //     sessionStorage.clear();
-    //     sessionStorage.setItem("restart", true);
-    // }
+    window.onunload = e => {
+        sessionStorage.clear();
+        sessionStorage.setItem("restart", true);
+    }
 }

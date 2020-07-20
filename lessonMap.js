@@ -44,6 +44,12 @@ var nCurrentX = 0; // המיקום הראשוני של השחקן על המסך
 // ככה אני מקבלת את המערך השמור בסטורג
 // var arrScore = JSON.parse(sessionStorage.getItem("arrScore")); 
 $(function () {
+    
+    // הוספת סימני מיקום לא מאופשרים
+    for (let i = 1; i <= AMOUNT_OF_EXERCISES; i++) {
+        $(".exercises-container").append('<img src="assets/images/exergray.svg" class="place-icon" id="exer' + i + '" />');
+    }
+    
     // התנאי בודק - האם כבר היו בעמוד הזה קודם
     if (sessionStorage.getItem("nCurrentExercise") !== null) {
         nCurrentExercise = Number(sessionStorage.getItem("nCurrentExercise"));
@@ -62,11 +68,6 @@ $(function () {
     else {
         sessionStorage.setItem("nCurrentExercise", nCurrentExercise);
         nCurrentExercise = 1;
-    }
-
-    // הוספת סימני מיקום לא מאופשרים
-    for (let i = 1; i <= AMOUNT_OF_EXERCISES; i++) {
-        $(".exercises-container").append('<img src="assets/images/exergray.svg" class="place-icon" id="exer' + i + '" />');
     }
 
     // מוסיף את עיצוב המיקום הנוכחי
