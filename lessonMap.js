@@ -51,24 +51,11 @@ $(function () {
     }
     
     // התנאי בודק - האם כבר היו בעמוד הזה קודם
-    if (sessionStorage.getItem("nCurrentExercise") !== null) {
-        nCurrentExercise = Number(sessionStorage.getItem("nCurrentExercise"));
-        nCurrentX = sessionStorage.getItem("nCurrentX");
-        if (!nCurrentX)
-            nCurrentX = window.innerWidth - $("#player").width();
-
-        // לבטל את הטרנזישן כדי שבמעבר לשלב הבא הוא יתחיל ממיקומו האחרון
-        $("#player").css("transition", "unset");
-
-        // $("#player").css("left", nCurrentX + "px");
-        nCurrentExercise--;
-        movePlayer();
-        nCurrentExercise++;
-    }
-    else {
+    if (sessionStorage.getItem("nCurrentExercise") === null) {
         sessionStorage.setItem("nCurrentExercise", nCurrentExercise);
         nCurrentExercise = 1;
-    }
+    } else
+        nCurrentExercise = Number(sessionStorage.getItem("nCurrentExercise"));
 
     // מוסיף את עיצוב המיקום הנוכחי
     $("#exer" + nCurrentExercise).addClass("current-exercise place-icon");
@@ -85,7 +72,7 @@ function onportrait() {
     $(".place-icon").css({height: "16vw"});
     
     $(".place-icon.current-exercise").css({bottom: "3vw"});
-    movePlayer(true);
+    movePlayer();
 }
 
 function onlandscape() {
@@ -94,15 +81,27 @@ function onlandscape() {
     movePlayer();
 }
 
-function movePlayer(yAxis = false) {
-    // הוספת טרנזישן כאן כדי שרק לאחר שהשחקן יתמקם אז הוא יעשה את אנימציית התזוזה
-    $("#player").css("transition", "2s  cubic-bezier(0, 0.26, 0.43, 0.92) left");
+function movePlayer() {
 
     // בודק האם המשתמש לא סיים את כל התרגולים
     if (nCurrentExercise <= AMOUNT_OF_EXERCISES) {
-        let exer = $("#exer" + nCurrentExercise);
-        let bounds = exer[0].getBoundingClientRect();
-        if (yAxis) 
+        
+        let before = $("#exer" + (nCurrentExercise - 1))[0];
+        $("#player").css("transition", "unset");
+        let bounds = before ? before.getBoundingClientRect() : {x: window.innerWidth, y: window.innerHeight, width: 0, height: 0};
+        if (!rotation.angle)
+            nCurrentX = bounds.y + bounds.height / 2;
+        else 
+            nCurrentX = bounds.x + bounds.width / 2;
+        $("#player").css("left", nCurrentX + "px");
+
+        void document.querySelector("#player").offsetWidth;
+        // הוספת טרנזישן כאן כדי שרק לאחר שהשחקן יתמקם אז הוא יעשה את אנימציית התזוזה
+        $("#player").css("transition", "2s cubic-bezier(0, 0.26, 0.43, 0.92) left");
+        
+        let exer = $("#exer" + nCurrentExercise)[0];
+        bounds = exer.getBoundingClientRect();
+        if (!rotation.angle) 
             nCurrentX = bounds.y + bounds.height / 2;
         else 
             nCurrentX = bounds.x + bounds.width / 2;

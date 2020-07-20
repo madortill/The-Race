@@ -5,7 +5,6 @@ $(function () {
         media.addListener(orient);
         function orient(e) {
             rotation.angle = window.orientation || media.matches ? 0 : 90;
-            console.log(rotation.angle);
             if (media.matches) {
                 rotation.sin = /*Math.sin(90 / 180 * Math.PI)*/1;
                 rotation.cos = /*Math.cos(90 / 180 * Math.PI)*/0;
@@ -16,8 +15,10 @@ $(function () {
                 document.documentElement.style.transformOrigin = "top right";
                 document.documentElement.style.left = "0";
                 document.documentElement.style.position = "absolute";
-                document.documentElement.style.width = `${document.documentElement.clientHeight}px`;
-                document.documentElement.style.height = `${document.documentElement.clientWidth}px`;
+                let cHeight = document.documentElement.clientHeight;
+                let cWidth = document.documentElement.clientWidth;
+                document.documentElement.style.width = `${cHeight}px`;
+                document.documentElement.style.height = `${cWidth}px`;
                 if(window.onportrait) Promise.resolve().then(onportrait);
                 e.preventDefault();
             } else {
