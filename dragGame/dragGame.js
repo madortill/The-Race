@@ -101,44 +101,90 @@ function addElements() {
     elUl = document.createElement("ul");
     $(elUl).attr("id", "sortable");
     $(".ans-conatisner-drag-game").append(elUl);
+    window.handleOrientation();
 
     // adds rows to the ul
     for (var nCount = 0; nCount < AMOUNT_OF_ANSWERS; nCount++) {
         $(elUl).append('<li class="list-drag" id="answer' + Number(nCount + 1) + '">'+ "<img class='wood-img' src='../assets/images/order.svg'/>" + "<p class='wood-text'>"+ sentencesAndOrder[nCount] +"</p>" + '</li>');
     }
-        heightWood = $("#sortable").height() / AMOUNT_OF_ANSWERS - 0;
-        $(".wood-img").css("height", heightWood);
+    heightWood = $("#sortable").height() / AMOUNT_OF_ANSWERS - 0;
+    $(".wood-img").css("height", heightWood);
+    
+    $("#sortable").disableSelection();
+    
+    // add event listener to the check button
+    $(".check-button-drag-game").on("click", checkSortable);
+}
 
+
+function handleOrientation() {
+    if (!$("#sortable").length) return;
+    if($("#sortable").sortable('instance'))
+        $("#sortable").sortable('destroy');
     $("#sortable").sortable({
         axis: rotation.angle === 0 ? "x" : "y",
+        containment: ".ans-conatisner-drag-game",
         create: start,
         activate: start,
         sort: function (e, ui) {
             if (!rotation.angle) {
                 transformDrag(e, ui);
                 ui.helper.css({top: ui.position.top + e.target.clientHeight - ui.helper.height() / 2});
-                // ui.helper.css({left: ui.position.left + ui.helper.data("offset").left,
-                //                top: ui.position.top + ui.helper.data("offset").top});
             }
         }, 
         scroll: false
     });
+    heightWood = $("#sortable").height() / AMOUNT_OF_ANSWERS - 0;
+    $(".wood-img").css("height", heightWood);
+    $(".list-drag").each((i, el) => {
+        $("#sortable").children()[AMOUNT_OF_ANSWERS - 1 - i].after(el);
+    });
 
-    function start() {
+    
+    if (rotation.angle)
+        $("#sortable").css("flexDirection", "");
+    else
+        $("#sortable").css("flexDirection", "column-reverse");
+
+    function start(e) {
+        let sort = $(e.target).sortable('instance');
+        if (sort.containment) {
+            let container = $($(e.target).sortable('option', 'containment'));
+            /**
+             * @type {ClientRect}
+             */
+            let bounds = container[0].getBoundingClientRect();
+            transform(bounds);
+            
+            sort.containment = [
+				Math.abs(bounds.left) + ( parseInt( container.css( "borderLeftWidth" ), 10 ) || 0 ) +
+					( parseInt( container.css( "paddingLeft" ), 10 ) || 0 ) - sort.margins.left,
+				Math.abs(bounds.top) + ( parseInt( container.css( "borderTopWidth" ), 10 ) || 0 ) +
+					( parseInt( container.css( "paddingTop" ), 10 ) || 0 ) - sort.margins.top,
+                Math.abs(bounds.left) + Math.abs(bounds.width) -
+					( parseInt( container.css( "borderLeftWidth" ), 10 ) || 0 ) -
+					( parseInt( container.css( "paddingRight" ), 10 ) || 0 ) -
+					sort.helperProportions.width - sort.margins.left,
+				Math.abs(bounds.top) + Math.abs(bounds.height) -
+					( parseInt( container.css( "borderTopWidth" ), 10 ) || 0 ) -
+					( parseInt( container.css( "paddingBottom" ), 10 ) || 0 ) -
+					sort.helperProportions.height - sort.margins.top
+            ];
+            transform(new RectView(sort.containment));
+        }
+    
         if (!rotation.angle){
             let items = $(this).data('ui-sortable').items;
-            items.forEach(transform);
-            items.forEach(item => item.left += item.width / 2);
+            items.forEach(i => transform(new SizeView(i)));
             $(this).data('ui-sortable').items = items;
         }
     }
-
-    $("#sortable").disableSelection();
-
-    // add event listener to the check button
-    $(".check-button-drag-game").on("click", checkSortable);
 }
+window.onlandscape = function() {
+    handleOrientation();
 
+}
+window.onportrait = handleOrientation;
 /*
              checkSortable
             ===============
@@ -159,10 +205,12 @@ function checkSortable() {
         arrOrderAnswer.push((document.querySelector(".ui-sortable").children[nCount].textContent));
     }
 
+    var reverse = !rotation.angle;
     // Check if the user order is correct
     for (let nCount = 0; nCount < AMOUNT_OF_ANSWERS; nCount++) {
         // Compares the user list to the correct order
-        if (arrOrderAnswer[nCount] !== originalArrSen[nCount]) {
+        var dstIndex = reverse ? AMOUNT_OF_ANSWERS - 1 - nCount : nCount;
+        if (arrOrderAnswer[nCount] !== originalArrSen[dstIndex]) {
             document.querySelector(".ui-sortable").children[nCount].style.backgroundImage = "url('../assets/images/order-wrong.svg')";
             bCorrectOrder = false;
             nMistakes++;

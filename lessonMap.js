@@ -43,7 +43,6 @@ var nCurrentX = 0; // המיקום הראשוני של השחקן על המסך
 
 // ככה אני מקבלת את המערך השמור בסטורג
 // var arrScore = JSON.parse(sessionStorage.getItem("arrScore")); 
-
 $(function () {
     // התנאי בודק - האם כבר היו בעמוד הזה קודם
     if (sessionStorage.getItem("nCurrentExercise") !== null) {
@@ -55,7 +54,10 @@ $(function () {
         // לבטל את הטרנזישן כדי שבמעבר לשלב הבא הוא יתחיל ממיקומו האחרון
         $("#player").css("transition", "unset");
 
-        $("#player").css("left", nCurrentX + "px");
+        // $("#player").css("left", nCurrentX + "px");
+        nCurrentExercise--;
+        movePlayer();
+        nCurrentExercise++;
     }
     else {
         sessionStorage.setItem("nCurrentExercise", nCurrentExercise);
@@ -77,10 +79,10 @@ $(function () {
     setTimeout(function () {
         $("#exer" + nCurrentExercise).on("click", goIntoExercise);
     }, 2000);
-
 });
 function onportrait() {
     $(".place-icon").css({height: "16vw"});
+    
     $(".place-icon.current-exercise").css({bottom: "3vw"});
     movePlayer(true);
 }

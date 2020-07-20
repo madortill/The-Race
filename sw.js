@@ -20,7 +20,10 @@ function setup(client) {
         caches.open(cacheName).then(c =>
             c.match("build.version").then(file => (file && file.text()) || Promise.resolve("")).then(onlineStatus => {
                 self.refetch = status !== onlineStatus;
-                if (self.refetch) caches.open(cacheName).then(c => c.put("build.version", statusBody.clone()));
+                if (self.refetch) {
+                    caches.delete(cacheName);
+                    caches.open(cacheName).then(c => c.put("build.version", statusBody.clone()));
+                }
             })
         )
     )).catch(e => {
