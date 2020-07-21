@@ -56,6 +56,10 @@ $(function () {
     }, 2000);
 });
 
+window.onportrait = movePlayer;
+window.onlandscape = movePlayer;
+
+
 function movePlayer() {
     // בודק האם המשתמש לא סיים את כל התרגולים
     if (nCurrentExercise <= AMOUNT_OF_EXERCISES) {
