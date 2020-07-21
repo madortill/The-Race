@@ -4,7 +4,7 @@ $(function () {
         let media = window.matchMedia("(orientation: portrait)");
         media.addListener(orient);
         function orient(e) {
-            rotation.angle = window.orientation || media.matches ? 0 : 90;
+            rotation.angle = window.orientation || (media.matches ? 0 : 90);
             if (media.matches) {
                 rotation.sin = /*Math.sin(90 / 180 * Math.PI)*/1;
                 rotation.cos = /*Math.cos(90 / 180 * Math.PI)*/0;
@@ -63,13 +63,13 @@ function SizeView(obj) {
     Object.defineProperties(this, {
         "width": {
             get: () => obj.width,
-            set (val) { 
+            set: (val) => { 
                 obj.width = val;
             }
         },
         "height": {
             get: () => obj.height,
-            set (val) { 
+            set: (val) => { 
                 obj.height = val;
             }
         }

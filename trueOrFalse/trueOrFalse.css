@@ -48,7 +48,7 @@ html, body {
 /* קונטיינר מסך העזרה */
 .help-explanation {
     position: absolute;
-    font-size: 5vmin;
+    font-size: 4.5vmin;
     padding: 3%;
     background-color: white;
     color: #5289C7;

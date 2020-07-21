@@ -162,7 +162,6 @@ function addElements() {
     $('.missing-word-design').draggable({
         revert: "invalid",
         drag: transformDrag, 
-        // containment: ".container-all",
         scroll: false
     });
 }

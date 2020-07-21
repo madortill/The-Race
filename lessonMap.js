@@ -24,27 +24,13 @@ const whichExercises = [
         game: "dragGame",
         title: "גרירה לפי סדר"
     }
-   
-    // {
-    //     game: "snake",
-    //     title: "תפוס ת'אוטובוס"
-    // },
-    // {
-    //     game: "monopoly",
-    //     title: "מונופול"
-    // }
 ];
-const AMOUNT_OF_EXERCISES = whichExercises.length; //לשנות בהתאם למספר התרגולים
-
-sessionStorage.setItem("num_of_exer", whichExercises.length); ////// צריך?
+const AMOUNT_OF_EXERCISES = whichExercises.length;
 
 var nCurrentExercise = 1;
 var nCurrentX = 0; // המיקום הראשוני של השחקן על המסך
 
-// ככה אני מקבלת את המערך השמור בסטורג
-// var arrScore = JSON.parse(sessionStorage.getItem("arrScore")); 
 $(function () {
-    
     // הוספת סימני מיקום לא מאופשרים
     for (let i = 1; i <= AMOUNT_OF_EXERCISES; i++) {
         $(".exercises-container").append('<img src="assets/images/exergray.svg" class="place-icon" id="exer' + i + '" />');
@@ -54,7 +40,8 @@ $(function () {
     if (sessionStorage.getItem("nCurrentExercise") === null) {
         sessionStorage.setItem("nCurrentExercise", nCurrentExercise);
         nCurrentExercise = 1;
-    } else
+    } 
+    else
         nCurrentExercise = Number(sessionStorage.getItem("nCurrentExercise"));
 
     // מוסיף את עיצוב המיקום הנוכחי
@@ -68,27 +55,16 @@ $(function () {
         $("#exer" + nCurrentExercise).on("click", goIntoExercise);
     }, 2000);
 });
-function onportrait() {
-    $(".place-icon").css({height: "16vw"});
-    
-    $(".place-icon.current-exercise").css({bottom: "3vw"});
-    movePlayer();
-}
-
-function onlandscape() {
-    $(".place-icon").css({height: ""});
-    $(".place-icon.current-exercise").css({bottom: ""});
-    movePlayer();
-}
 
 function movePlayer() {
-
     // בודק האם המשתמש לא סיים את כל התרגולים
     if (nCurrentExercise <= AMOUNT_OF_EXERCISES) {
-        
         let before = $("#exer" + (nCurrentExercise - 1))[0];
+
         $("#player").css("transition", "unset");
+
         let bounds = before ? before.getBoundingClientRect() : {x: window.innerWidth, y: window.innerHeight, width: 0, height: 0};
+        
         if (!rotation.angle)
             nCurrentX = bounds.y + bounds.height / 2;
         else 

@@ -162,7 +162,7 @@ html, body {
   font-size: min(3.5vmin, 1.5vmax);
   text-align: center;
   padding-bottom: 8%;
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
 }
 
 .ans:hover {
