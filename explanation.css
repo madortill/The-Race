@@ -34,21 +34,21 @@ html, body {
 }
 
 .next {
-    position: absolute;
-    height: 13%;
-    width: 17%;
-    top: 71%;
-    left: 50%;
-    transform: translateX(-50%);
+    height: 16%;
+    width: 22%;
     cursor: pointer;
 }
 
 .next:hover {
-    transform: scale(1.05) translateX(-48%);
+    transform: scale(1.05);
 }
 
 .white {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     left: 50%;
     top: 50%;
     height: 66%;
@@ -60,24 +60,17 @@ html, body {
 }
 
 .white>p {
-    position: absolute;
-    top: 29%;
-    line-height: 7vmin;
     font-size: 7vmin;
     font-size:  min(7vmin, 4vmax);
-    transform: translateX(-50%);
-    left: 50%;
     width: 82%;
     text-align: center;
     color: #394374;
     line-height: 5vmax;
+    margin: 0;
 }
 
 .white> :first-child {
-    position: absolute;
     font-size: 6vmax;
-    right: 50%;
-    bottom: 55%;
-    transform: translateX(50%);
     color: #5289C7;
+    margin: 0;
 }

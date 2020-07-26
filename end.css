@@ -31,12 +31,14 @@ html, body {
 }
 
 .button-try-again {
-    position: absolute;
-    width: 17%;
-    height: 12%;
-    top: 39%;
-    right: 15.7%;
+    /*! position: absolute; */
+    width: 15vmax;
+    height: 13vmin;
+    /*! top: 39%; */
+    /*! right: 15.7%; */
     cursor: pointer;
+    transform: translate(0, 50%);
+    margin-top: -6.5vmin;
 }
 .grade {
     position: relative;
@@ -59,19 +61,21 @@ html, body {
     flex-direction: column;
     top: 5%;
     right: 2.5%;
-    width: 39.7%;
-    height: 32.6%;
-    padding: 2%;
+    width: 43.7%;
+    height: 40.6%;
+    /*! padding: 2%; */
     line-height: 8vmin;
+    justify-content: space-around;
 }
 .title {
     font-size: 9vmin;
     color: #5289C7;
     font-weight: 500;
+    margin-top: 4vmin;
 }
 
 .contant {
-    padding-top: 4%;
+    padding-top: 2vmin;
     font-size: 4.5vmin;
     font-weight: 500;
     color: #394374;

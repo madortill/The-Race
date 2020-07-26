@@ -194,7 +194,7 @@ function addFeedback(currentPicId) {
     }
     // השחקן צדק
     else {
-        $(".feedback-title ").css("color", "#efc091");
+        $(".feedback-title ").css("color", "#e8b04a");
     }
     // כפתור עזרה (X)
     $(".exit-feedback").on("click", function() {
