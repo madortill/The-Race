@@ -197,7 +197,7 @@ html, body {
 
 .try-again {
     display: none;
-    width: 46%;
+    width: 35%;
     height: 19%;
     background-image: url("../assets/images/tryagain.svg");
     background-repeat: no-repeat;
